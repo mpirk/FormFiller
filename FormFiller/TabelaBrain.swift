@@ -24,4 +24,20 @@ extension Tabela {
         
     }
     
+    func getCellType(fillData: Array<[String:Any]>, index: Int) -> String {
+        
+        let cellData = fillData[index]
+        return cellData["cellType"] as! String
+        
+    }
+    
+    func getCellConfigs(cellInfo: [String:Any], mainConfigs: [String:Any]) -> [String:Any] {
+        
+        //pego o tipo de celula
+        let cellType = cellInfo["cellType"] as! String
+    
+        return cellInfo["cellConfigs"] as! [String:Any]
+    
+    }
+    
 }

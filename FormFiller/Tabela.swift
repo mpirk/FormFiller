@@ -28,11 +28,6 @@ class Tabela: UITableViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     //................................................................................................... TABELA
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,13 +41,47 @@ class Tabela: UITableViewController {
         return fillData?.count ?? 0
         
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let cellType = getCellType(fillData: fillData!, index: indexPath.row)
+        
+        switch cellType {
+        case "header":
+            return 30
+            
+        case "field":
+            return 48
+            
+        case "button":
+            return 60
+            
+        default:
+            return 30
+        }
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        if let cellData:[String:Any] = fillData?[indexPath.row] {
+            
+            if cellData["cellType"] as! String == "header" {
+                
+                let cell: CellHeader = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CellHeader
+                
+                //pego as informações de configuração
+                
+                cell.lbl_texto.text = "teste"
+                return cell
+                
+            }
+            
+        } else {
+            
+        }
+        
+        let cell: CellHeader = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! CellHeader
+        cell.lbl_texto.text = "empty"
         return cell
     }
 
