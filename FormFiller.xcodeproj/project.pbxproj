@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E630F38E21148B4A00E1235C /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E630F38C21148B4A00E1235C /* HeaderCell.swift */; };
+		E630F38F21148B4A00E1235C /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E630F38D21148B4A00E1235C /* HeaderCell.xib */; };
+		E630F39121148C9300E1235C /* TabelaBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E630F39021148C9300E1235C /* TabelaBrain.swift */; };
+		E630F3942114980100E1235C /* formSample.plist in Resources */ = {isa = PBXBuildFile; fileRef = E630F3932114980100E1235C /* formSample.plist */; };
 		E664680B21147AA0001651CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664680A21147AA0001651CE /* AppDelegate.swift */; };
 		E664681021147AA0001651CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E664680E21147AA0001651CE /* Main.storyboard */; };
 		E664681221147AA2001651CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E664681121147AA2001651CE /* Assets.xcassets */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E630F38C21148B4A00E1235C /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		E630F38D21148B4A00E1235C /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		E630F39021148C9300E1235C /* TabelaBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelaBrain.swift; sourceTree = "<group>"; };
+		E630F3932114980100E1235C /* formSample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = formSample.plist; sourceTree = "<group>"; };
 		E664680721147AA0001651CE /* FormFiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormFiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E664680A21147AA0001651CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E664680F21147AA0001651CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E630F38B21148B1E00E1235C /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				E630F38C21148B4A00E1235C /* HeaderCell.swift */,
+				E630F38D21148B4A00E1235C /* HeaderCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		E630F392211497DD00E1235C /* files */ = {
+			isa = PBXGroup;
+			children = (
+				E630F3932114980100E1235C /* formSample.plist */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
 		E66467FE21147AA0001651CE = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +79,15 @@
 		E664680921147AA0001651CE /* FormFiller */ = {
 			isa = PBXGroup;
 			children = (
+				E630F392211497DD00E1235C /* files */,
+				E630F38B21148B1E00E1235C /* cells */,
 				E664680A21147AA0001651CE /* AppDelegate.swift */,
 				E664680E21147AA0001651CE /* Main.storyboard */,
 				E664681121147AA2001651CE /* Assets.xcassets */,
 				E664681321147AA2001651CE /* LaunchScreen.storyboard */,
 				E664681621147AA2001651CE /* Info.plist */,
 				E664682021147D07001651CE /* Tabela.swift */,
+				E630F39021148C9300E1235C /* TabelaBrain.swift */,
 			);
 			path = FormFiller;
 			sourceTree = "<group>";
@@ -122,7 +150,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E630F38F21148B4A00E1235C /* HeaderCell.xib in Resources */,
 				E664681521147AA2001651CE /* LaunchScreen.storyboard in Resources */,
+				E630F3942114980100E1235C /* formSample.plist in Resources */,
 				E664681221147AA2001651CE /* Assets.xcassets in Resources */,
 				E664681021147AA0001651CE /* Main.storyboard in Resources */,
 			);
@@ -136,6 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E664682121147D07001651CE /* Tabela.swift in Sources */,
+				E630F39121148C9300E1235C /* TabelaBrain.swift in Sources */,
+				E630F38E21148B4A00E1235C /* HeaderCell.swift in Sources */,
 				E664680B21147AA0001651CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
