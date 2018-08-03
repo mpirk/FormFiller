@@ -1,5 +1,5 @@
 //
-//  HeaderCell.swift
+//  CellHeader.swift
 //  FormFiller
 //
 //  Created by Marcelo Pirk on 03/08/18.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HeaderCell: UITableViewCell {
+class CellHeader: UITableViewCell {
 
-    @IBOutlet weak var lbl_header: UILabel!
+    @IBOutlet weak var lbl_texto: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +22,5 @@ class HeaderCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

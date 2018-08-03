@@ -11,14 +11,20 @@ import UIKit
 class Tabela: UITableViewController {
     
     //................................................................................................... VARS
-    var fillData = [String:Any]()
+    var mainConfig:[String:Any]?
+    var fillData:Array<[String:Any]>?
 
     //................................................................................................... LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TEMP
-        makeDados(plistName: "formSample")
+        if let allData = makeDados(plistName: "formSample") {
+            
+            mainConfig = allData["mainAttr"] as? [String:Any]
+            fillData = allData["cells"] as? Array<[String:Any]>
+            
+        }
+        
         
     }
 
@@ -30,16 +36,19 @@ class Tabela: UITableViewController {
     //................................................................................................... TABELA
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return fillData?.count ?? 0
+        
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...

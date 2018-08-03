@@ -18,13 +18,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="cmh-Oq-ZeQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="30" id="cmh-Oq-ZeQ" customClass="CellHeader" customModule="FormFiller" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cmh-Oq-ZeQ" id="Cgp-4T-Iqt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Myu-68-zoz">
+                                            <rect key="frame" x="20" y="4.5" width="335" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Myu-68-zoz" secondAttribute="trailing" constant="20" id="3iv-ov-Mwj"/>
+                                        <constraint firstItem="Myu-68-zoz" firstAttribute="centerY" secondItem="Cgp-4T-Iqt" secondAttribute="centerY" id="6De-88-gYl"/>
+                                        <constraint firstItem="Myu-68-zoz" firstAttribute="leading" secondItem="Cgp-4T-Iqt" secondAttribute="leading" constant="20" id="nV4-q0-xZ9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lbl_texto" destination="Myu-68-zoz" id="Fyn-Xd-daT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
