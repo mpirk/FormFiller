@@ -10,14 +10,17 @@ import Foundation
 
 extension Tabela {
     
-    private func makeDados() -> [String:Any] {
+    func makeDados(plistName: String) -> [String:Any]? {
         
-        var retorno:[String:Any] = [:]
+        var retorno: [String:Any]?
         
-        retorno.updateValue("mainAttr:", forKey: "mainAttr:")
+        //carrego o arquivo do bundle
+        if let path = Bundle.main.path(forResource: plistName, ofType: "plist"),
+            let myDict = NSDictionary(contentsOfFile: path) as? [String: Any] {
+            retorno = myDict
+        }
         
-        
-        return [:]
+        return retorno
         
     }
     

@@ -17,6 +17,9 @@ class Tabela: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //TEMP
+        makeDados(plistName: "formSample")
+        
     }
 
     override func didReceiveMemoryWarning() {
